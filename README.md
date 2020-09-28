@@ -84,11 +84,11 @@
 	* doInBackgraound
 	* onUpdateProgress
 	* onPostExecute
-*Parameters:
+* Parameters:
 	* Params - parameters sent to task for execution
 	* Progress - progress units of the task
 	* Result - result of the task
-*Async disadvantage is taht we have to maintain seperate thread, creating, destroying, cache management
+* Async disadvantage is taht we have to maintain seperate thread, creating, destroying, cache management
 	
 <b>12. Loaders:</b>
 * Loads data from content providers and other data source
