@@ -1,4 +1,4 @@
-<b>1. onClick:</b></br>
+<b>1. onClick:</b>
 ```
 btn_save.setOnClickListener(new View.OnClickListener() {
 @Override
