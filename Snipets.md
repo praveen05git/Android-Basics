@@ -29,23 +29,29 @@ Intent HomeIntent=new Intent(this,HomeScreen.class);
             HomeIntent.putExtra("nitVal","One");
             startActivity(HomeIntent);
             overridePendingTransition(R.anim.right_enter,R.anim.left_out);
+```
 Receive Extra:
+```
 Intent intent=getIntent();
-        String pass=intent.getStringExtra("nitVal");            
+        String pass=intent.getStringExtra("nitVal");
+```        
 To URL:            
+```
 Intent playStore = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.jotter.notes"));
                 startActivity(playStore);
+```                
 
               or
-              
+```           
 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/dev?id=7031227816779180923")));
-
+```
 To HomeScreen:
+```
 Intent ExitIntent=new Intent(Intent.ACTION_MAIN);
                 ExitIntent.addCategory(Intent.CATEGORY_HOME);
                 ExitIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(ExitIntent);
-                ```
+ ```             
                 
 <b>5. AlertDialog:</b></br>
 ```
@@ -66,9 +72,9 @@ Intent ExitIntent=new Intent(Intent.ACTION_MAIN);
                     }
                 });
                 alert_dia1.show();
-                ```
+ ```
                 
-<b>6. ListView:</b><br>
+<b>6. ListView:</b></br>
 ```
 ListView lView;
 ArrayList<String> ar = new ArrayList<>();
@@ -85,13 +91,14 @@ ArrayAdapter<String> fileAdapter = new ArrayAdapter<>(this, android.R.layout.sim
 
                 }
             });
-                
+ ```              
  onItemClick:
+ ```
  lView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
                 public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) { }
             });
-            ```
+ ```
                 
 <b>7. Menu:</b></br>
 ```
@@ -134,12 +141,10 @@ android:roundIcon="@mipmap/ic_icon_circle">
 private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             =  new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-            Fragment fragment=null;
-
-            switch (item.getItemId()) {
+   @Override
+   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+          Fragment fragment=null;
+          switch (item.getItemId()) {
                 case R.id.weekly:
                     fragment=new weekly_fg();
                     break;
@@ -147,22 +152,23 @@ private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemS
             return loadFragment(fragment);
         }
     };
-    
+```    
 Load Fragment:    
-    private boolean loadFragment(Fragment fragment)
-    {
-        if(fragment!=null)
-        {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .setCustomAnimations(R.anim.right_enter, R.anim.left_out)
-                    .replace(R.id.fg_container,fragment)
-                    .commit();
-            return true;
+```
+private boolean loadFragment(Fragment fragment)
+{
+   if(fragment!=null)
+   {
+      getSupportFragmentManager()
+      .beginTransaction()
+      .setCustomAnimations(R.anim.right_enter, R.anim.left_out)
+      .replace(R.id.fg_container,fragment)
+      .commit();
+      return true;
         }
-        return false;
+      return false;
     }
-    ```
+  ```
 
 <b>10. Shared Preference:</b></br>
 Writing the value:
@@ -171,8 +177,9 @@ SharedPreferences pref = getContext().getSharedPreferences("ProPref", 0); // 0 -
 SharedPreferences.Editor editor = pref.edit();
 editor.putInt("ProPage",3);
 editor.apply();
-        
+```        
 Reading the value:
+```
 SharedPreferences preferences=getApplicationContext().getSharedPreferences("ProPref",0);
 int page=preferences.getInt("ProPage",-1);
 ```
