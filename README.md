@@ -5,9 +5,8 @@
 * Intents - Go from one activity to another, Start a service and send a broadcast 
 * Services - Don't have UI, runs in background,(Ex: Download task)
 * Broadcast Receivers - Register to listen for system events or custom events and it performs its taks as specified, Ex: Custom Braodcast Receiver (Download Complete Message) or System Event (Battery Low Message)
-* Content providers - Provides the content necessary to another app Ex:Whatsapp asks for contacts and Contacts app provides the content
-</br>
-</br>
+* Content providers - Provides the content necessary to another app Ex:Whatsapp asks for contacts and Contacts app provides the content</br>
+
 <b>2. How Android understands which Layout to be shown?</b>
 * manifest.xml - Entry point for all application
 * Android OS looks for the manifest and searches intent-filter with ACTION.VIEW
