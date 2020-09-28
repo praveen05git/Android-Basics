@@ -1,15 +1,18 @@
 <b>1. onClick:</b></br>
-```btn_save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {  }
-            }
+```
+btn_save.setOnClickListener(new View.OnClickListener() {
+@Override
+ public void onClick(final View v) {  }
+ }
 ```
 <b>2. Notification:</b></br>
-```Snackbar.make(view,"Enter content", Snackbar.LENGTH_SHORT).show();
+```
+Snackbar.make(view,"Enter content", Snackbar.LENGTH_SHORT).show();
 Toast.makeText(getApplicationContext(),"Enter content",Toast.LENGTH_SHORT).show();
 ```
 
-3. Check Permission:
+<b>3. Check Permission:</b></br>
+```
 String permission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
 public boolean checkPermission(String permission)
 {
@@ -17,9 +20,11 @@ public boolean checkPermission(String permission)
         int check= ContextCompat.checkSelfPermission(this,permission);
         return (check== PackageManager.PERMISSION_GRANTED);
 }
+```
 
-4. Intent:
+<b>4. Intent:</b></br>
 To Other Activity:
+```
 Intent HomeIntent=new Intent(this,HomeScreen.class);
             HomeIntent.putExtra("nitVal","One");
             startActivity(HomeIntent);
@@ -40,8 +45,10 @@ Intent ExitIntent=new Intent(Intent.ACTION_MAIN);
                 ExitIntent.addCategory(Intent.CATEGORY_HOME);
                 ExitIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(ExitIntent);
+                ```
                 
-5. AlertDialog:
+<b>5. AlertDialog:</b></br>
+```
  AlertDialog alert_dia1=new AlertDialog.Builder(MainActivity.this).create();
                 alert_dia1.setTitle("Remove Ads!");
                 alert_dia1.setMessage("Download the Jotter Lite Pro to enjoy Ad-free service!! Download Now?");
@@ -59,8 +66,10 @@ Intent ExitIntent=new Intent(Intent.ACTION_MAIN);
                     }
                 });
                 alert_dia1.show();
+                ```
                 
-6. ListView:
+<b>6. ListView:</b><br>
+```
 ListView lView;
 ArrayList<String> ar = new ArrayList<>();
 ar.add(f.getName());
@@ -82,8 +91,10 @@ ArrayAdapter<String> fileAdapter = new ArrayAdapter<>(this, android.R.layout.sim
                 @Override
                 public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) { }
             });
+            ```
                 
-7. Menu:
+<b>7. Menu:</b></br>
+```
 @Override
 public boolean onCreateOptionsMenu(Menu menu)
 {
@@ -102,8 +113,9 @@ public boolean onOptionsItemSelected(MenuItem item)
          case R.id.opt_new:
     }
  }
- 
- 8. Manifest:
+ ```
+ <b>8. Manifest:</b></br>
+ ```
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <application
 android:label="@string/app_name"
@@ -115,8 +127,10 @@ android:roundIcon="@mipmap/ic_icon_circle">
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 </activity>
+```
 
-9. Bottom Navigation:
+<b>9. Bottom Navigation:</b></br>
+```
 private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             =  new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -148,9 +162,11 @@ Load Fragment:
         }
         return false;
     }
+    ```
 
-10. Shared Preference:
+<b>10. Shared Preference:</b></br>
 Writing the value:
+```
 SharedPreferences pref = getContext().getSharedPreferences("ProPref", 0); // 0 - for private mode
 SharedPreferences.Editor editor = pref.edit();
 editor.putInt("ProPage",3);
@@ -159,3 +175,4 @@ editor.apply();
 Reading the value:
 SharedPreferences preferences=getApplicationContext().getSharedPreferences("ProPref",0);
 int page=preferences.getInt("ProPage",-1);
+```
