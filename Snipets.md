@@ -1,15 +1,13 @@
 <b>1. onClick:</b></br>
-
-'''btn_save.setOnClickListener(new View.OnClickListener() {'''
-
+```btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {  }
             }
-
-
-2. Notification:
-Snackbar.make(view,"Enter content", Snackbar.LENGTH_SHORT).show();
+```
+<b>2. Notification:</b></br>
+```Snackbar.make(view,"Enter content", Snackbar.LENGTH_SHORT).show();
 Toast.makeText(getApplicationContext(),"Enter content",Toast.LENGTH_SHORT).show();
+```
 
 3. Check Permission:
 String permission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
