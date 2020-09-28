@@ -81,7 +81,7 @@
 * Can update the main UI
 * Methods:
 	* onPreExecute
-	* doInBackgraound
+	* doInBackground
 	* onUpdateProgress
 	* onPostExecute
 * Parameters:
