@@ -51,7 +51,7 @@
 * Widgets, shadows, vector drawable, animation
 * Listview Recyclerview and cardview
 
-<b>7. Diff between list and recyclerview:</b>
+<b>7. Difference between list and recyclerview:</b>
 * The RecyclerView is much more powerful, flexible and a major enhancement over ListView
 * Recycles the same view and doesn't create new views like listview
 * ViewHolder pattern is used in RecyclerView, each time it doesn't ahve to call findViewById() for mapping the text view inside list
