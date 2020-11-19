@@ -94,5 +94,8 @@
 * Loads data from content providers and other data source
 * Loaders simplify thread management
 * Starts on a seperate thread by default
+
+<b>13. Services:</b>
+* https://www.geeksforgeeks.org/services-in-android-with-example/#:~:text=Playing%20music%20in%20the%20background,order%20to%20pause%20the%20music.
 	
  
