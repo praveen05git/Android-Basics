@@ -200,4 +200,4 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
     String strtext = getArguments().getString("edttext");    
     return inflater.inflate(R.layout.fragment, container, false);
 }
-'''
+```
