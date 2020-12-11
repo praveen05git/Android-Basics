@@ -102,3 +102,36 @@
 <b>14. Important Questions:</b>
 - https://www.toptal.com/android/interview-questions
  
+<b>15. Work Manager:</b>
+- WorkManager aims to simplify the developer experience by providing a first-class API for system-driven background processing. It is intended for background jobs that should run even if the app is no longer in the foreground. Where possible, it uses JobScheduler or Firebase JobDispatcher to do the work; if your app is in the foreground, it will even try to do the work directly in your process.
+- https://medium.com/google-developer-experts/services-the-life-with-without-and-worker-6933111d62a6
+- WorkManager — receives work with arguments & constraints and enqueue it.
+- Worker — have only one method to implement doWork() which is executed on a background thread. It’s the place where all your background tasks should be done. Try to keep it as simple as possible.
+- WorkRequest — work request specify which Worker enqueued with what Arguments and what are the Constraints for it (e.g., internet, charging ).
+- WorkResult — Success, Failure, Retry.
+- Data — Persistable set of key/value pairs which are passed to/from Worker
+
+- Extend the class and define the work
+```
+public class LocationUploadWorker extends Worker {
+    ...
+     //Upload last passed location to the server
+    public WorkerResult doWork() {
+        //do the work
+        return WorkerResult.SUCCESS;
+    }
+}
+```
+- Execute the work
+```
+WorkManager.getInstance().enqueue(uploadWork);
+```
+- Observe the work
+```
+WorkManager.getInstance().getStatusById(locationWork.getId()).observe(this,
+        workStatus -> {
+    if(workStatus!=null && workStatus.getState().isFinished()){
+         ...
+    }
+});
+```
