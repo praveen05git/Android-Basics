@@ -183,3 +183,21 @@ Reading the value:
 SharedPreferences preferences=getApplicationContext().getSharedPreferences("ProPref",0);
 int page=preferences.getInt("ProPage",-1);
 ```
+
+<b>11. Passing values to Fragment:</b>
+```
+Bundle bundle = new Bundle();
+bundle.putString("edttext", "From Activity");
+// set Fragmentclass Arguments
+Fragmentclass fragobj = new Fragmentclass();
+fragobj.setArguments(bundle);
+```
+<b>Receiving it in Fragment</b>
+```
+@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+        Bundle savedInstanceState) {
+    String strtext = getArguments().getString("edttext");    
+    return inflater.inflate(R.layout.fragment, container, false);
+}
+'''
