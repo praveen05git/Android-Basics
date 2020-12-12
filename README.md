@@ -135,3 +135,9 @@ WorkManager.getInstance().getStatusById(locationWork.getId()).observe(this,
     }
 });
 ```
+<b>16. Intent Flags:
+- <b>FLAG_ACTIVITY_NEW_TASK -</b> If set, this activity will become the start of a new task on this history stack. A task (from the activity that started it to the next task activity) defines an atomic group of activities that the user can move to. Tasks can be moved to the foreground and background; all of the activities inside of a particular task always remain in the same order.
+
+- <b>FLAG_ACTIVITY_CLEAR_TOP -</b> If set, and the activity being launched is already running in the current task, then instead of launching a new instance of that activity, all of the other activities on top of it will be closed and this Intent will be delivered to the (now on top) old activity as a new Intent.
+
+- <b>FLAG_ACTIVITY_SINGLE_TOP -</b> If set, the activity will not be launched if it is already running at the top of the history stack.
