@@ -141,3 +141,12 @@ WorkManager.getInstance().getStatusById(locationWork.getId()).observe(this,
 - <b>FLAG_ACTIVITY_CLEAR_TOP -</b> If set, and the activity being launched is already running in the current task, then instead of launching a new instance of that activity, all of the other activities on top of it will be closed and this Intent will be delivered to the (now on top) old activity as a new Intent.
 
 - <b>FLAG_ACTIVITY_SINGLE_TOP -</b> If set, the activity will not be launched if it is already running at the top of the history stack.
+
+## Other Links:
+
+- https://github.com/praveen05git/Android-Cheat-sheet
+- https://github.com/vamsitallapudi/Android-Interview-Questions-And-Answers
+- https://github.com/SaadAAkash/Android-Interview-Essentials
+- https://github.com/latestalexey/awesome-interview-questions#android
+- https://github.com/Olshansk/interview#android
+- https://github.com/MaximAbramchuck/awesome-interview-questions#android
