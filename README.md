@@ -142,7 +142,7 @@ WorkManager.getInstance().getStatusById(locationWork.getId()).observe(this,
 
 - <b>FLAG_ACTIVITY_SINGLE_TOP -</b> If set, the activity will not be launched if it is already running at the top of the history stack.
 
-## Other Links:
+## Questions Repos:
 
 - https://github.com/praveen05git/Android-Cheat-sheet
 - https://github.com/vamsitallapudi/Android-Interview-Questions-And-Answers
@@ -150,3 +150,14 @@ WorkManager.getInstance().getStatusById(locationWork.getId()).observe(this,
 - https://github.com/latestalexey/awesome-interview-questions#android
 - https://github.com/Olshansk/interview#android
 - https://github.com/MaximAbramchuck/awesome-interview-questions#android
+
+## Links:
+- https://www.toptal.com/android/interview-questions
+- https://www.knowledgehut.com/interview-questions/android
+- https://www.guru99.com/android-interview-questions.html
+- https://arc.dev/interview/android-interview-questions-and-answers
+- https://www.fullstack.cafe/blog/advanced-android-interview-questions
+- https://www.edureka.co/blog/interview-questions/android-interview-questions-fresher-experienced/
+- https://www.upwork.com/i/interview-questions/android/
+- https://intellipaat.com/blog/interview-question/android-interview-questions/
+- https://www.bitdegree.org/tutorials/android-interview-questions/
